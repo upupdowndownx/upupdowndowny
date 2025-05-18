@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<!-- saved from url=(0077)https://service.shaanxigj.com/report/inspect/c945cae51ea70bb519fb9d37a49f4261 -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>查询结果</title>
+</head>
+
+<body>
+<div class="wrapper">
+    <div class="line"></div>
+
+    <div class="imgBox">
+        <div class="time">
+         <p id="date">
+         </p>
+         <script>   
+           // 获取当前日期    
+           const date = new Date();    
+           // 格式化日期（例如：2023年10月26日）    
+           //const date = new Date('2024-05-21T10:49:07');
+           const year = date.getFullYear();
+           const month = (date.getMonth() + 1).toString().padStart(2, '0'); 
+           // 月份补0
+           const day = date.getDate().toString().padStart(2, '0');       
+           // 日期补0
+           const hours = date.getHours().toString().padStart(2, '0');      
+           // 小时补0
+           const minutes = date.getMinutes().toString().padStart(2, '0');   
+           // 分钟补0
+           const seconds = date.getSeconds().toString().padStart(2, '0');   
+           // 秒数补0
+           const formattedDate = `${year}年${month}月${day}日 ${hours}:${minutes}:${seconds}`;
+           // 将日期写入HTML    
+           document.getElementById("date").innerHTML = formattedDate;  
+           //console.log(formattedDate)
+          </script>
+        </div>
+        
+        
+        <div>
+            <img alt="" class="qualified" src="https://file.shaanxigj.com/hazardous/images/qualified.png">
+        </div>
+
+    </div>
+
+    <ul class="infoList">
+        <li class="infoItem">
+            <span>证书编号</span>
+            <span>SWCC202420800</span>
+        </li>
+        <li class="infoItem">
+            <span>机动车号牌</span>
+            <div class="truckNum_box">
+                <span>陕K63G0挂</span>
+            </div>
+        </li>
+        <li class="infoItem">
+            <span>罐体产品编码</span>
+            <span>YE609202202A116</span>
+        </li>
+        <!--<li class="infoItem">
+            <span>签发人</span>
+            <span th:text="${inspectResult.auditName}">-</span>
+        </li>-->
+        <li class="infoItem">
+            <span>检验机构</span>
+            <span>陕西省特种设备检验检测研究院</span>
+        </li>
+        <li class="infoItem">
+            <span>检验场地</span>
+            <span>陕西省延安市宝塔区李渠镇刘庄村</span>
+        </li>
+        <li class="infoItem">
+            <span>检验日期</span>
+            <span>2025年05月27日</span>
+        </li>
+        <li class="infoItem">
+            <span>到期日期</span>
+            <span>2026年05月27日</span>
+        </li>
+    </ul>
+
+    <!-- <div class="btnBox">
+        <a class="btn" href="" th:href="${inspectResult.certificateUrl}"
+            th:if="${inspectResult.certificateUrl}">下载检验证书</a>
+        <a class="btn" href="" th:href="${inspectResult.inspectReportUrl}"
+            th:if="${inspectResult.inspectReportUrl}">下载检验报告</a>
+    </div> -->
+</div>
+
+
+
+
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        border: none;
+    }
+
+    .line {
+        width: 100%;
+        height: 10px;
+        background-color: #F5F5F5;
+    }
+
+    .imgBox {
+        padding: 0 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 35px;
+        margin-bottom: 20px;
+    }
+
+    .imgBox img {
+        width: 85px;
+        height: 85px;
+    }
+
+    .time {
+        font-size: 18px;
+        font-family: PingFang SC;
+        font-weight: bold;
+        color: #1189FF;
+    }
+
+    .qualified {
+        width: 52px;
+        height: 52px;
+    }
+
+    .prompt {
+        color: #333333;
+        font-size: 18px;
+        font-weight: 600;
+        margin: 18px 0 46px;
+    }
+
+    .infoList {
+        margin: 0 20px;
+    }
+
+    .infoItem {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        color: #666666;
+        font-size: 14px;
+    }
+
+    .truckNum_box {
+        width: 66px;
+        height: 22px;
+        box-sizing: border-box;
+        background-color: #ffb844;
+        padding: 1px 1px;
+    }
+
+    .truckNum_box span {
+        display: inline-block;
+        width: 64px;
+        height: 20px;
+        line-height: 20px;
+        box-sizing: border-box;
+        border: 1px solid #313131;
+        border-radius: 2px;
+        font-size: 11px;
+        font-family: PingFang SC;
+        font-weight: bold;
+        color: #313131;
+        text-align: center;
+        padding: 0 2px;
+        white-space: nowrap;
+    }
+
+    .btnBox {
+        margin-top: 180px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .btn {
+        margin: 0 36px 30px;
+        width: 260px;
+        line-height: 40px;
+        border-radius: 20px;
+        background-color: #2E97FF;
+        color: #FFFFFF;
+        font-size: 14px;
+        text-align: center;
+        text-decoration: none;
+    }
+
+    @media screen and (max-width: 1024px) {
+        .btnBox {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+</style>
+<div id="yuanbao-shotcuts"><div></div></div></body><div id="yuanbao-float-box-container" style="position: static; display: block;"><template shadowrootmode="open"><link rel="stylesheet" href="chrome-extension://hellbaecciboeicgkoemipppognmecmb/contentScript.css"><yuanbao-ball id="float-box-container"><div class="float-ball-wrap" style="display: block; transform: translate(0px, 0px); cursor: pointer;"><div id="base-float-ball" class="float-ball"><img src="chrome-extension://hellbaecciboeicgkoemipppognmecmb/assets/img/logo.png" class="img"></div></div></yuanbao-ball><yuanbao-tool id="float-box-tool"></yuanbao-tool><div id="yuanbao-popup" style="z-index: 2147483647; position: fixed; top: 0px; left: 0px; width: 100%;"></div><yuanbao-screenshot id="selection-screenshot-preview"></yuanbao-screenshot></template></div></html>
